@@ -1,0 +1,11 @@
+---
+- name: Playbook
+  hosts: localhost
+  connection: local
+  become: yes
+  roles:
+    - common
+    - ssh
+    - apache
+    - ufw
+    - nmap

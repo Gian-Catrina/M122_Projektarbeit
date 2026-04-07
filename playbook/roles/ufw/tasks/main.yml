@@ -1,0 +1,23 @@
+---
+- name: installiere ufw
+  ansible.builtin.apt:
+    name: ufw
+    state: present
+
+- name: shh erlauben
+  community.general.ufw:
+    rule: allow
+    port: 22
+    proto: tcp
+
+- name: http erlauben fuer apache
+  community.general.ufw:
+    rule: allow
+    port: 80
+    proto: tcp
+
+- name: ufw aktivieren und standard-deny setzen
+  community.general.ufw:
+    state: enabled
+    policy: deny
+    direction: incoming

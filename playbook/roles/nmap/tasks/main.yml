@@ -1,0 +1,14 @@
+---
+- name: install nmap
+  ansible.builtin.apt:
+    name: nmap
+    state: present
+
+- name: scan localhost
+  ansible.builtin.command: nmap -sV localhost
+  register: nmap_result
+  changed_when: false
+
+- name: show nmap output
+  ansible.builtin.debug:
+    msg: "{{ nmap_result.stdout_lines }}"

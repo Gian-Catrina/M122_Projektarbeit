@@ -1,0 +1,13 @@
+---
+- name: update cache
+  ansible.builtin.apt:
+    update_cache: yes
+
+- name: upgrade
+  ansible.builtin.apt:
+    upgrade: dist
+
+- name: install open-vm-tools
+  ansible.builtin.apt:
+    name: open-vm-tools
+    state: present
