@@ -4,11 +4,7 @@
     name: apache2
     state: present
 
-- name: setze minimalistische index.html
-  ansible.builtin.copy:
-    content: "hi it worked"
-    dest: /var/www/html/index.html
-    owner: www-data
-    group: www-data
-    mode: '0644'
-  notify: restart apache
+- name: apache2 restarten
+  ansible.builtin.service:
+    name: apache2
+    state: restarted
