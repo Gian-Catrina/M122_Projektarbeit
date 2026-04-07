@@ -3,7 +3,7 @@
 # Autor: Gian Catrina
 # Erstellungsdatum: 31.03.2026
 # Letztes Aenderungensdatum: 28.04.2026
-# Beschreibung: Dieses Script installiert Ansible, und fuehrt das Playbook aus, damit automatisiert man die Installation von diversen Programmen
+# Beschreibung: Dieses Script installiert Ansible, und fuehrt das Playbook aus, damit automatisiert man die Installation von diversen Programmen.
 
 echo "========================================================================"
 echo "Zuerst, wird der packet-manager erneuert, und ansible wird runtergeladen"
