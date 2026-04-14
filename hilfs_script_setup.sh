@@ -51,3 +51,5 @@ echo "Jetzt wird gleich 'BECOME password' kommen, dort musst du dein sudo Passwo
 echo "========================================================================"
 
 ansible-playbook -i $hostspfad $sitepfad -K
+
+exit 1
