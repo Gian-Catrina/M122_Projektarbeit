@@ -21,8 +21,8 @@ LOG="$logpfad"
 
 if command -v nmap > /dev/null; then
     echo "Installation hat geklappt"
-    echo "geklappt" >> $LOG
+    echo "geklappt" > $LOG
 else
     echo "Hat nicht geklappt"
-    echo "nicht geklappt" >> $LOG
+    echo "nicht geklappt" > $LOG
 fi
